@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.registration-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=600'); /* Add your background image URL */
+  background-size: cover;
+  background-position: center;
+}
+
+.registration-form-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 60%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.registration-form-container h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.registration-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.registration-form .MuiTextField-root {
+  flex-basis: calc(50% - 10px); /* Each field takes half width with gap */
+}
+
+.registration-form .MuiInputLabel-root {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.registration-form .MuiInputLabel-root.Mui-focused {
+  color: #fff;
+}
+
+.registration-form .MuiInputBase-input {
+  color: #fff;
+}
+
+.registration-form .MuiInputBase-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.registration-form .MuiButton-root {
+  width: 100%; /* Button takes full width */
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.registration-form-container .MuiButton-root.Mui-disabled {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .registration-form .MuiTextField-root {
+    flex-basis: calc(100% - 20px); /* Each field takes full width with gap */
+  }
+}
