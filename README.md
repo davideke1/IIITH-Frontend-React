@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# Water Quality Measuring System - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the frontend code for the Water Quality Measuring System. The frontend is built using React and provides a user-friendly interface for interacting with the backend API.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup and Installation](#setup-and-installation)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **User Interface:** Intuitive interface for viewing and interacting with water quality data.
+- **Charts:** Visual representation of water quality metrics.
+- **Real-Time Updates:** Displays real-time data using WebSockets.
+- **Authentication:** User login and registration.
+- **Responsive Design:** Optimized for both desktop and mobile devices.
+- **Images:** Includes images for better user experience and data representation.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React:** JavaScript library for building user interfaces.
+- **Redux:** State management for React applications.
+- **Axios:** Promise-based HTTP client for making API requests.
+- **Socket.IO:** Library for real-time WebSocket communication.
+- **Chart.js:** Library for rendering charts.
+- **Material-UI:** React components for faster and easier web development.
+- **Docker:** Containerization for easy deployment and development.
+- **Images:** Used for icons, backgrounds, and illustrations.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup and Installation
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (v14.x or higher)
+- npm (v6.x or higher)
+- Docker
+- Docker Compose
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/davideke1/IIITH-Frontend-React.git
+    cd IIITH-Frontend-React
+    ```
 
-### `npm run eject`
+2. Create a `.env` file in the `frontend` directory and add your environment variables:
+    ```bash
+    REACT_APP_API_URL=http://localhost/api
+    REACT_APP_WS_URL=ws://localhost/ws
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install the dependencies:
+    ```bash
+    npm install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Build and run the Docker container:
+    ```bash
+    docker-compose up --build
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Access the frontend application at `http://localhost`.
+2. Log in or register to start using the application.
+3. View real-time water quality data and metrics.
+4. Access user-specific data and settings.
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
+This project is licensed under the MIT License. See the [LICENSE](../LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Images
 
-### Analyzing the Bundle Size
+Images are used throughout the application to enhance the user experience. These include:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Icons:** Used for various buttons and actions.
+- **Backgrounds:** Enhances the visual appeal of the application.
+- **Illustrations:** Provides better understanding and visualization of data.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ensure that all image files are placed in the `src/assets/images` directory and are appropriately referenced in your components.
