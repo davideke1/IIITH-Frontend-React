@@ -8,7 +8,9 @@ import Header from "../../users/Header";
 import { useNavigate } from "react-router-dom";
 import { SnackbarContent } from '@mui/material';
 import axiosService from "../../../helpers/axios";
+import { getUser } from "../../../hooks/user.actions";
 
+const user= getUser()
 const initialValues = {
   oldpassword: "",
   newpassword: "",
@@ -39,13 +41,25 @@ const PasswordForm = () => {
     try {
       const response = await axiosService.post("/password-change/", values);
       console.log(response.data);
+      const role = user.role;
+
       setSnackbarMessage(response.data.detail);
       setSnackbarSeverity("success");
       setSnackbarOpen(true);
       resetForm();
       setTimeout(() => {
-        navigate("/dashboard");
-      }, 5000); // Navigate to dashboard after 5 seconds
+        localStorage.clear();
+        if (role === "admin") {
+          navigate("/adminlogin");
+        } else {
+          navigate("/login");
+        }
+      }, 1500);
+
+      // localStorage.removeItem("auth");
+      // setTimeout(() => {
+      //   navigate("/admindashboard");
+      // }, 2000); // Navigate to dashboard after 5 seconds
     } catch (error) {
       console.error(error);
       setSnackbarMessage(error.response.data.error);

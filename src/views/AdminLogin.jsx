@@ -9,15 +9,15 @@ import { setUserData } from '../hooks/user.actions';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
 const StyledTextField = styled(TextField)({
-    '& label.Mui-focused': {
-      color: 'black',
+  '& label.Mui-focused': {
+    color: 'black',
+  },
+  '& .MuiOutlinedInput-root': {
+    '&.Mui-focused fieldset': {
+      borderColor: 'white',
     },
-    '& .MuiOutlinedInput-root': {
-      '&.Mui-focused fieldset': {
-        borderColor: 'white',
-      },
-    },
-  });
+  },
+});
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
@@ -27,6 +27,13 @@ const AdminLogin = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+
+    // Check if email or password fields are empty
+    if (!email || !password) {
+      setError('Email and password fields cannot be empty.');
+      return;
+    }
+
     try {
       const response = await axios.post('http://127.0.0.1:8000/api/adminlogin/', { email, password });
       // Assuming response contains access token and user info
@@ -47,7 +54,6 @@ const AdminLogin = () => {
           Admin Login
         </Typography>
         <Box component="form" onSubmit={handleLogin} noValidate sx={{ mt: 1 }}>
-        
           <StyledTextField
             label="Email"
             variant="outlined"

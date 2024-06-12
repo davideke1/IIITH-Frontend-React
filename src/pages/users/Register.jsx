@@ -191,7 +191,7 @@ const RegistrationForm = () => {
                 {isSubmitting ? <CircularProgress size="1.5rem" /> : 'Register'}
               </Button>
               <Typography variant="body1" align="center" sx={{ color: '#ded9ee', fontSize: '1.1rem', marginBottom: 1 }}>
-  If you have an account, <Link to="/login" style={{ color: '#007bff', textDecoration: 'none' }}>Login</Link>.
+  Have an account, <Link to="/login" style={{ color: '#007bff', textDecoration: 'none' }}>Login</Link>.
 </Typography>
 
 

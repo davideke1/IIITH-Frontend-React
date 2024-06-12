@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Line } from 'react-chartjs-2';
+// import axios from 'axios';
+// import { Line } from 'react-chartjs-2';
 import { Box, TextField, Button, Snackbar, Alert, Paper, Grid, useTheme, useMediaQuery } from '@mui/material';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -11,14 +11,14 @@ import Layout from "../../components/users/Layout";
 import axiosService from '../../helpers/axios';
 
 function HistoryData() {
-    const theme = useTheme();
+    // const theme = useTheme();
     const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
     const [historicalData, setHistoricalData] = useState([]);
     const [error, setError] = useState('');
     const [openSnackbar, setOpenSnackbar] = useState(false);
-    const isLargeScreen = useMediaQuery(theme.breakpoints.up("md"));
-    const isSmallScreen = useMediaQuery(theme.breakpoints.between("sm"));
+    // const isLargeScreen = useMediaQuery(theme.breakpoints.up("md"));
+    // const isSmallScreen = useMediaQuery(theme.breakpoints.between("sm"));
     const publicId = getUser().id;
 
     useEffect(() => {

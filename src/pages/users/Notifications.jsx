@@ -12,14 +12,14 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Layout from '../../components/users/Layout';
 import axiosService from '../../helpers/axios';
 import Header from '../../components/users/Header';
-const data = [
-    { title: "Jan", subtitle: "Hello World I love IIITH" },
-    { title: "Jan", subtitle: "Hello World I love IIITH" },
-    { title: "Jan", subtitle: "Hello World I love IIITH" },
-    { title: "Jan", subtitle: "Hello World I love IIITH" },
-    { title: "Jan", subtitle: "Hello World I love IIITH" },
+// const data = [
+//     { title: "Jan", subtitle: "Hello World I love IIITH" },
+//     { title: "Jan", subtitle: "Hello World I love IIITH" },
+//     { title: "Jan", subtitle: "Hello World I love IIITH" },
+//     { title: "Jan", subtitle: "Hello World I love IIITH" },
+//     { title: "Jan", subtitle: "Hello World I love IIITH" },
     
-  ];
+//   ];
   
 function Notification() {
   const [notifications, setNotifications] = useState([]);

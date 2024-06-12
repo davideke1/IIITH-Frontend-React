@@ -10,8 +10,6 @@ import { SnackbarContent } from "@mui/material";
 
 const user = getUser();
 
-
-
 const checkoutSchema = yup.object().shape({
   first_name: yup.string().required("required"),
   last_name: yup.string().required("required"),
