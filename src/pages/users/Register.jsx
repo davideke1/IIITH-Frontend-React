@@ -52,7 +52,7 @@ const RegistrationForm = () => {
   const handleFormSubmit=async (values, { setSubmitting, setStatus }) => {
     try {
       const { confirmPassword, ...submitValues } = values; // Exclude confirmPassword
-      await axios.post('http://127.0.0.1:8000/api/activations/register/', submitValues);
+      await axios.post('/api/activations/register/', submitValues);
       setStatus({ success: true });
       setSnackbarSeverity('success');
       setSnackbarMessage('Verification email sent. Please check your email.');

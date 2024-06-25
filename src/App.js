@@ -43,6 +43,7 @@ import NotFound from "./pages/Homepage/NotFound";
 import AdminProfile from "./views/AdminProfile";
 import AdminPasswordChange from "./views/AdminPasswordchange";
 import UserFeedback from "./views/UserFeedbacks";
+import Flow from "./pages/users/Flow";
 
 
 function App() {
@@ -97,6 +98,7 @@ function App() {
             }
           />
            <Route path="/historydata" element={<HistoryData />} />
+           <Route path="/flow" element={<Flow />} />
 
 
           {/* auth */}
@@ -114,7 +116,8 @@ function App() {
           {/* <Route path="/custompage" element={<CustomPage />} /> */}
 
           {/* Admin */}
-          <Route path="/adminlogin" element={<AdminLogin />} />
+          {/* <Route path="/adminlogin" element={<AdminLogin />} /> */}
+          <Route path="/loginadmin" element={<AdminLogin />} />
           {/* <Route path="/admin" element={<AdminPage />} /> */}
           <Route path="/admindashboard" element={
         <AdminProtectedRoute>

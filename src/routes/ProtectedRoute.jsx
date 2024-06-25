@@ -12,7 +12,7 @@ function ProtectedRoute({ children }) {
 // Admin Protected Route
 function AdminProtectedRoute({ children }) {
   const user = getUser();
-  if (!user) return <Navigate to="/login" />;
+  if (!user) return <Navigate to="/loginadmin" />;
   if (user.role !== 'admin') return <Navigate to="/" />;
   return <>{children}</>;
 }
